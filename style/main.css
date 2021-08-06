@@ -1,0 +1,29 @@
+
+.meta-details-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0px;
+    width: 750px;
+    flex-wrap: wrap;
+    
+}
+.bank-card{
+
+    box-shadow: 10px 10px 5px grey;
+}
+.work-card{
+
+    box-shadow: 0 -5px 5px -5px #333;
+}
+
+
+.laptop-details {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#collapsedLaptopCard {
+    flex-grow: 2;
+}
+
+

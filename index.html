@@ -1,0 +1,176 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Style main.css link -->
+    <link rel="stylesheet" href="./style/main.css">
+
+
+    <title>Computer Store</title>
+</head>
+<body>
+
+ <header>
+    <nav class="navbar bg-dark text-white mt-3">
+        <h4 class="ml-5">Computer Store</h4>
+   </nav>
+</header> 
+
+<main>
+    <div class="container">
+        <div class="meta-details-container">
+            <div class="bank-card">
+                <div class="card " style="width: 18rem;">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <h3 class="card-title pb-3"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" class="bi bi-bank" viewBox="0 0 16 16">
+                                    <path d="M8 .95 14.61 4h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.379l.5 2A.5.5 0 0 1 15.5 17H.5a.5.5 0 0 1-.485-.621l.5-2A.5.5 0 0 1 1 14V7H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 4h.89L8 .95zM3.776 4h8.447L8 2.05 3.776 4zM2 7v7h1V7H2zm2 0v7h2.5V7H4zm3.5 0v7h1V7h-1zm2 0v7H12V7H9.5zM13 7v7h1V7h-1zm2-1V5H1v1h14zm-.39 9H1.39l-.25 1h13.72l-.25-1z"/>
+                                  </svg> Joe Banker</h3>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-6 d-flex justify-content-start">
+                                <p>Balance</p>
+                            </div>
+                            <div class="col-6 d-flex justify-content-end">
+                                <p id="bankBalanceLabel">0 Kr.</p>
+                            </div>
+                        </div>
+                        <div class="row mb-5" id="loanContainer" style="display:none">
+                            <div class="col-6 d-flex justify-content-start">
+                                <p>Loan</p>
+                            </div>
+                            <div class="col-6 d-flex justify-content-end">
+                                <p id="loanAmountLabel">0 Kr.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <a id="getLoanBtn" href="#" class="btn btn-success w-100"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cash-coin" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0z"/>
+                                    <path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1h-.003zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195l.054.012z"/>
+                                    <path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083c.058-.344.145-.678.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1H1z"/>
+                                    <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 5.982 5.982 0 0 1 3.13-1.567z"/>
+                                  </svg> Get loan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="work-card">
+                <div class="card " style="width: 24rem;">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <h3 class="card-title pb-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tools" viewBox="0 0 16 16">
+                                    <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.356 3.356a1 1 0 0 0 1.414 0l1.586-1.586a1 1 0 0 0 0-1.414l-3.356-3.356a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0zm9.646 10.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708zM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11z"/>
+                                  </svg> Work</h3>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-6 d-flex justify-content-start">
+                                <p>Pay</p>
+                            </div>
+                            <div class="col-6 d-flex justify-content-end">
+                                <p id="payBalanceLabel">0 Kr.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <a href="#" id="payToBankBtn" class="btn btn-warning w-100"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-square" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm11.5 5.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                                  </svg> Bank</a>
+                            </div>
+                            <div class="col-4">
+                                <a href="#" id="workBtn" class="btn btn-primary w-100"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hammer" viewBox="0 0 16 16">
+                                    <path d="M9.972 2.508a.5.5 0 0 0-.16-.556l-.178-.129a5.009 5.009 0 0 0-2.076-.783C6.215.862 4.504 1.229 2.84 3.133H1.786a.5.5 0 0 0-.354.147L.146 4.567a.5.5 0 0 0 0 .706l2.571 2.579a.5.5 0 0 0 .708 0l1.286-1.29a.5.5 0 0 0 .146-.353V5.57l8.387 8.873A.5.5 0 0 0 14 14.5l1.5-1.5a.5.5 0 0 0 .017-.689l-9.129-8.63c.747-.456 1.772-.839 3.112-.839a.5.5 0 0 0 .472-.334z"/>
+                                  </svg> Work</a>
+                            </div>
+                            <div class="col-4">
+                                <a href="#" id="payLoanBtn" class="btn btn-warning w-100" style="display: none">Pay Loan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="laptop-details">
+                <div class="card border-0 pl-5" style="width: 18rem;">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <h3 class="card-title pb-3">Laptops</h3>
+                            </div>
+                        </div>
+                        <div class="row pb-3">
+                            <div class="col-12 w-100">
+
+                                <select class="custom-select mr-sm-2" id="chooseLaptop" onchange="chooseLaptop()">
+                                    <option selected>Choose laptop...</option>
+
+                                </select>
+                            </div>
+                            <div id="read-more" style="display: none;" class="col-12 w-100 pt-2">
+                                <h6>Features:</h6>
+                                <p id="laptop-features-label"></p>
+                                <button class="btn btn-info" type="button" data-toggle="collapse"
+                                        data-target="#collapsedLaptopCard" aria-expanded="false"
+                                        aria-controls="collapsedLaptopCard">
+                                    Read more
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collapse row mt-5 ml-5 border bg-white" id="collapsedLaptopCard">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="m-3">
+                            <img id="laptop-image" alt="" style="height: 130px; width: 180px;">
+                        </div>
+
+                    </div>
+                    <div class="col-lg-6 col-sm-6 ">
+                        <div class="m-3">
+                            <h4 id="laptop-title" class="pb-2"></h4>
+                            <p id="laptop-features"></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-12">
+                        <div class="m-3">
+                            <h4 id="laptop-price" class="pb-4 d-flex justify-content-center"></h4>
+                            <button id="buyLaptopBtn" class="btn btn-info w-100"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                              </svg> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</main>
+
+
+<!-- JavaScript -->
+<script src="./js/script.js"></script>
+
+<!-- src To jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+</html>
