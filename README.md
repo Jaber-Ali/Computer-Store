@@ -1,6 +1,6 @@
 # Computer-Store
 
-The is a dynamic webshope page bulit using  HTML/CSS,Bootstrap ,Json and JavaScript.
+The is a dynamic webshope page bulit using  HTML/CSS, Bootstrap, Json and JavaScript.
 # Development environment
 
 Visual Studio Code 
